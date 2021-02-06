@@ -8,7 +8,7 @@ $_session['email']=$username;
 $_session['name']=$name;
 $_session['number']=$mobile;
 $_session['password']=$password;
-echo $username;
+
 
 $conn = new mysqli('localhost', 'root', '','cedcab');
 if ($conn->connect_error) {

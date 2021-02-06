@@ -17,7 +17,7 @@ session_start();
 <body>
     <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky">
-        <a class="navbar-brand logo-margin" href="booking.php"><h3><span class='logo-color'>Ced</span>Cab</h3></a>
+        <a class="navbar-brand logo-margin" href="#"><h3><span class='logo-color'>Ced</span>Cab</h3></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

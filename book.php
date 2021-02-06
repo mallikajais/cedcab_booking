@@ -9,6 +9,15 @@ $_SESSION["pickup"] = $pickup;
 $_SESSION["drop"] = $drop;
 $_SESSION["cabtype"] = $cabtype;
 $_SESSION["weight"] = $weight;
+// $sql = "INSERT INTO tbl_ride (ride_date, from,to,cabtype,total_distance,luggage,total_fair,status,customeruser_id)
+//   VALUES ('now()', '$pickup', '$drop',$cabtype,'$password',0)";
+
+// if ($conn->query($sql) === TRUE) {
+//   echo "New record created successfully";
+//   // header('location:display.php');
+// } else {
+//   echo "Error: " . $sql . "<br>" . $conn->error;
+// }
 
 
 echo "Pickup : ".$pickup."<br>";

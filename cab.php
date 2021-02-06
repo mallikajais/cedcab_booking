@@ -107,7 +107,7 @@ $conn = new mysqli('localhost', 'root', '','cedcab');
                                     <div class="modal-body" >Your ride has been book but approval is needed from admin</div>
                                     <div class="modal-footer">
                                         <a href="customerdashboard.php"><button type="button" class="btn btn-info" data-dismiss="modal" onClick="window.open('customerdashboard.php')" >  ok  </button></a>
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal" onClick="window.location.reload()">Cancel</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal" onClick="request()">Cancel</button>
                                     </div>
                                     
                                 </div>
@@ -191,7 +191,21 @@ $conn = new mysqli('localhost', 'root', '','cedcab');
         }
         return true;
     }
-    
+    function request(){
+        var pickup=$('#pickup').val();
+        var drop=$('#drop').val();
+        var cabtype=$('#cabtype').val();
+        var weight=$('#weight').val();
+        $.ajax({
+        type:"POST",
+        url:"book.php",
+        data:{pickup:pickup,drop:drop,cabtype:cabtype,weight:weight},
+        success:function(data){
+            $('#result').html(data);
+            window.open('customerdashboard.php');
+        }
+        });
+    }
     $(document).ready(function(){
     $("#send").click(function(){
         var pickup=$('#pickup').val();

@@ -35,7 +35,7 @@
                 
 
                 <li class="nav-item">
-                    <button class="btn btn-info" type="submit">Book Now</button>
+                    <!-- <button class="btn btn-info" type="submit">Book Now</button> -->
                 </li>
                 
             </ul> 

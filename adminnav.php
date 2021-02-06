@@ -37,7 +37,7 @@ session_start();
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="adminpending.php" id="userrequest">pending User Requests</a>
-                        <a class="dropdown-item" href="javascript:void(0)" id="approveduserrequests">Approved User Requests</a>
+                        <a class="dropdown-item" href="adminapprove.php" id="approveduserrequests">Approved User Requests</a>
                         <a class="dropdown-item" href="javascript:void(0)" id="allusers">All Users</a>
                     </div>
                 </li>
@@ -56,7 +56,7 @@ session_start();
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="javascript:void(0)" id="resetpassword">Change Password</a>
-                        <a class="dropdown-item" href="edit.php" id="editprofile">Edit Profile</a>
+                        <!-- <a class="dropdown-item" href="edit.php" id="editprofile">Edit Profile</a> -->
                     </div>
                 </li>
                 
@@ -65,7 +65,7 @@ session_start();
             </ul>
             <form class="form-inline my-2 my-lg-0">
             <div class="greetings text-white">Hi <?php echo $_SESSION['name'];?></div>
-            <li class="nav-item"><a href="cab.php"class="btn btn-info " style="margin-right:10px;" type="submit">Book Now</a></li>
+            <!-- <li class="nav-item"><a href="cab.php"class="btn btn-info " style="margin-right:10px;" type="submit">Book Now</a></li> -->
                 <a href="login.php"class="btn btn-info my-2 my-sm-0" type="submit">Logout</a>
             </form>
         </div>

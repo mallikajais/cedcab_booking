@@ -41,22 +41,14 @@ session_start();
                         <a class="dropdown-item" href="javascript:void(0)" id="allusers">All Users</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Location
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="javascript:void(0)" id="managelocation">Location List</a>
-                        <a class="dropdown-item" href="javascript:void(0)" id="addlocation">Add New Location</a>
-                    </div>
-                </li>
+                
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Account
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="javascript:void(0)" id="resetpassword">Change Password</a>
-                        <a class="dropdown-item" href="edit.php" id="editprofile">Edit Profile</a>
+                        
+                        <a class="dropdown-item" href="update.php" id="editprofile">Edit Profile</a>
                     </div>
                 </li>
                 
