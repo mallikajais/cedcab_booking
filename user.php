@@ -33,6 +33,7 @@
             <!-- <table class="table table-hover responsive nowrap" style="width:100%" id="search">     -->
             <thead>
                     <tr class="bg-dark text-white text-center">
+                    <th>ID</th>
                     <th>Username</th>
                     <th>Name</th>
                     <th>DateofSignup(YYYY-MM-DD)</th>
@@ -43,21 +44,21 @@
                 </thead>
             <?php
                 $conn = new mysqli('localhost', 'root', '','cedcab');
-                $q="select*from tbl_user";
+                $q="SELECT*from tbl_user WHERE `status`!=1";
                 
                 $query=mysqli_query($conn,$q);
                 while($result=mysqli_fetch_array($query)){
             ?>
             <tbody>
                 <tr>
-                    <!-- </td>-->
+                    <td><?php echo $result['user_id'];?></td> 
                     <td><?php echo $result['email_id'];?></td> 
                     <td><?php echo $result['name'];?></td>
                     <td><?php echo $result['dateofsignup'];?>
                     
                     <td><?php echo $result['mobile'];?></td>
                     
-                    <td><button class="btn btn-danger" > <a class="text-white" href="delete.php?id=<?php echo $result['id'];?>"> Delete</a></button></td>
+                    <td><button class="btn btn-danger" > <a class="text-white" href="delete.php?id=<?php echo $result['user_id'];?>"> Delete</a></button></td>
                     
                 </tr>
             </tbody>

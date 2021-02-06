@@ -25,10 +25,10 @@ session_start();
                         Rides
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="javascript:void(0)" id="riderequest">Ride Requests</a>
-                        <a class="dropdown-item" href="javascript:void(0)" id="completedridesall">Completed Rides</a>
-                        <a class="dropdown-item" href="usercancel.php" id="canceledridesall">Canceled Rides</a>
-                        <a class="dropdown-item" href="javascript:void(0)" id="allridesadmin">All Rides</a>
+                        <a class="dropdown-item" href="adminpending.php" id="riderequest">Ride Requests</a>
+                        <a class="dropdown-item" href="admincomplete.php" id="completedridesall">Completed Rides</a>
+                        <a class="dropdown-item" href="acancelride.php" id="canceledridesall">Canceled Rides</a>
+                        <a class="dropdown-item" href="user.php" id="allridesadmin">All Rides</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -38,7 +38,7 @@ session_start();
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="adminpending.php" id="userrequest">pending User Requests</a>
                         <a class="dropdown-item" href="adminapprove.php" id="approveduserrequests">Approved User Requests</a>
-                        <a class="dropdown-item" href="javascript:void(0)" id="allusers">All Users</a>
+                        <a class="dropdown-item" href="user.php" id="allusers">All Users</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -46,19 +46,19 @@ session_start();
                         Location
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="javascript:void(0)" id="managelocation">Location List</a>
-                        <a class="dropdown-item" href="javascript:void(0)" id="addlocation">Add New Location</a>
+                        <a class="dropdown-item" href="location.php" id="managelocation">Location List</a>
+                        <a class="dropdown-item" href="addlocation.php" id="addlocation">Add New Location</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Account
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="javascript:void(0)" id="resetpassword">Change Password</a>
-                        <!-- <a class="dropdown-item" href="edit.php" id="editprofile">Edit Profile</a> -->
+                         <a class="dropdown-item" href="javascript:void(0)" id="resetpassword">Change Password</a> 
+                         <a class="dropdown-item" href="edit.php" id="editprofile">Edit Profile</a> 
                     </div>
-                </li>
+                </li> -->
                 
                     
                 
@@ -66,7 +66,7 @@ session_start();
             <form class="form-inline my-2 my-lg-0">
             <div class="greetings text-white">Hi <?php echo $_SESSION['name'];?></div>
             <!-- <li class="nav-item"><a href="cab.php"class="btn btn-info " style="margin-right:10px;" type="submit">Book Now</a></li> -->
-                <a href="login.php"class="btn btn-info my-2 my-sm-0" type="submit">Logout</a>
+                <a href="logout.php"class="btn btn-info my-2 my-sm-0" type="submit">Logout</a>
             </form>
         </div>
     </nav>

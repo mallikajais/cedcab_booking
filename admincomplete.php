@@ -60,8 +60,37 @@
                     <td><?php echo $result['luggage'];?></td>
                     <td><?php echo $result['total_fare'];?></td>
                    
-                    <td><button class="btn btn-primary" > <a class="text-white" href="invoice.php?id=<?php echo $result['id'];?>"> Invoice</a></button></td>
-                    
+                    <td><button class="btn btn-primary" data-toggle="modal" data-target="#myModal" > <a class="text-white" href="#?id=<?php echo $result['ride_id'];?>"> Invoice</a></button></td>
+                    <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+ 
+        <div class="modal-header">
+          <h4 class="modal-title">Invoice</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        
+        <div class="modal-body">
+          From   :-   <label><?php echo $result['from'];?></label><br>
+          To   :-   <label><?php echo $result['to'];?></label><br>
+          CabType   :-   <label><?php echo $result['cabtype'];?></label><br>
+          TotalDistance   :-   <label><?php echo $result['total_distance'];?></label><br>
+          Luggage   :-   <label><?php echo $result['luggage'];?></label><br>
+          TotalFare   :-   <label><?php echo $result['total_fare'];?></label><br>
+        </div>
+        
+       
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" onclick="window.print()" data-dismiss="modal">Print</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
                 </tr>
             </tbody>
             <?php 
@@ -71,6 +100,6 @@
         </div>
     </div>
     </div>
-    <!-- <?php include 'footer.php';?> -->
+     <?php include 'footer.php';?> 
 </body>
 </html>

@@ -27,6 +27,7 @@ if ($conn->connect_error) {
           $_SESSION['number']=$row["mobile"];
           $_SESSION['user_id']=$row['user_id'];
           $_SESSION['username']=$row['email_id'];
+          $_SESSION['password']=$row['password'];
           // echo $_SESSION['user_id'];
           if(($username=='admin@gmail.com')&&($password=='Password123$')){
             header('location:admindashboard.php');

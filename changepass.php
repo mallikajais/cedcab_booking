@@ -1,29 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php include 'nav.php';?>
+
+    <?php include 'nav.php';
+    $conn = new mysqli('localhost', 'root', '','cedcab');
+    if(isset($_POST['submit'])){
+        $name=$_SESSION['name'];
+        $new=$_POST['new'];
+        $sql="UPDATE `tbl_user` SET `password`='$new' WHERE `name`='$name'";
+        $query=mysqli_query($conn,$sql);
+    }
+    
+    ?>
     <div>
         <div class="container" style="margin-top:60px;height:60vh;">
         <center>
-        <form action="/action_page.php">
+        <form method="post">
             <div class="form-group">
-            Username <input type="email" class="form-control" id="email" placeholder="Enter username" name="email">
+            Username <input type="text" class="form-control" disabled id="email" value="<?php echo $_SESSION['name'];?>" name="name">
             </div>
             <div class="form-group">
             
-            old Password <input type="password" class="form-control" id="old" placeholder="Enter old password" name="old">
+            old Password <input type="password" class="form-control" disabled id="old" value="<?php echo $_SESSION['password'];?>" name="old">
             </div>
             <div class="form-group ">
             
             New password <input class="form-control" type="password" id="new" name="new" placeholder="Enter new password">
             
             </div>
-            <button type="submit" class="btn btn-info">Submit</button>
+            <input type="submit" name="submit" class="btn btn-info" value="Submit"/>
         </form>
         <center>
         </div>
